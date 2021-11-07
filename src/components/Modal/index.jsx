@@ -21,8 +21,8 @@ const Modal = ({ children, open, onClose }) => {
     onClose();
   }
 
-  function onDialogClick(event) {
-    event.stopPropagation();
+  function onDialogClick(e) {
+    e.stopPropagation();
   }
 
   return (

@@ -67,12 +67,14 @@ export const MapContainer = (props) => {
 
     const request = {
       location: center,
-      radius: '20000',
+      radius: '2000',
       type: ['restaurant'],
     };
 
     service.nearbySearch(request, (results, status) => {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
+
+        // console.log('Restaurants >>> ', results)
         dispatch(setRestaurants(results));
       }
     });
